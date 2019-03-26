@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,9 +17,13 @@ namespace ElanApp
         {
             InitializeComponent();
         }
+        
 
         private void button_register_Click(object sender, EventArgs e)
         {
+            
+
+            ElanDbContext db = new ElanDbContext();
             User user = new User
             {
                 Name = textBox_name.Text,
@@ -28,24 +33,39 @@ namespace ElanApp
                 ConfirmPassword = textBox_confirmpassword.Text
             };
 
-            ElanDbContext db = new ElanDbContext();
 
-            db.Users.Add(user);
+            ValidationContext context = new ValidationContext(user);
+            List<ValidationResult> list = new List<ValidationResult>();
+          var result=  Validator.TryValidateObject(user, context, list, true);
 
-            db.SaveChanges();
+            if (result)
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+            else
+            {
+                foreach (var item in list)
+                {
+                    label6.Text +="\n"+item.ErrorMessage.ToString();
+                }
+
+                
+            }
+
      
             
-            if (user!=null)
-            {
-                this.Hide();
-                LoginForm loginForm = new LoginForm();
-                loginForm.ShowDialog();
-            }
+
 
         
 
            
            
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

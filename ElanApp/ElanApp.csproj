@@ -59,11 +59,11 @@
     <Compile Include="AdvertisementAdding.Designer.cs">
       <DependentUpon>AdvertisementAdding.cs</DependentUpon>
     </Compile>
-    <Compile Include="Advertisements.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Components\ElanControl1.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Advertisements.Designer.cs">
-      <DependentUpon>Advertisements.cs</DependentUpon>
+    <Compile Include="Components\ElanControl1.Designer.cs">
+      <DependentUpon>ElanControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="ElanDbContext.cs" />
     <Compile Include="House.cs" />
@@ -101,8 +101,8 @@
     <EmbeddedResource Include="AdvertisementAdding.resx">
       <DependentUpon>AdvertisementAdding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Advertisements.resx">
-      <DependentUpon>Advertisements.cs</DependentUpon>
+    <EmbeddedResource Include="Components\ElanControl1.resx">
+      <DependentUpon>ElanControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

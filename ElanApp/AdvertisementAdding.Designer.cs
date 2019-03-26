@@ -35,9 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_phonenumber = new System.Windows.Forms.TextBox();
             this.nUMBER = new System.Windows.Forms.Label();
-            this.textBox_discount = new System.Windows.Forms.TextBox();
-            this.Discount = new System.Windows.Forms.Label();
             this.button_addhouse = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -99,22 +98,6 @@
             this.nUMBER.TabIndex = 5;
             this.nUMBER.Text = "Phone Number";
             // 
-            // textBox_discount
-            // 
-            this.textBox_discount.Location = new System.Drawing.Point(383, 295);
-            this.textBox_discount.Name = "textBox_discount";
-            this.textBox_discount.Size = new System.Drawing.Size(140, 20);
-            this.textBox_discount.TabIndex = 8;
-            // 
-            // Discount
-            // 
-            this.Discount.AutoSize = true;
-            this.Discount.Location = new System.Drawing.Point(404, 252);
-            this.Discount.Name = "Discount";
-            this.Discount.Size = new System.Drawing.Size(49, 13);
-            this.Discount.TabIndex = 7;
-            this.Discount.Text = "Discount";
-            // 
             // button_addhouse
             // 
             this.button_addhouse.Location = new System.Drawing.Point(530, 380);
@@ -125,14 +108,22 @@
             this.button_addhouse.UseVisualStyleBackColor = true;
             this.button_addhouse.Click += new System.EventHandler(this.button_addhouse_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(671, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(10, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = " ";
+            // 
             // AdvertisementAdding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 509);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button_addhouse);
-            this.Controls.Add(this.textBox_discount);
-            this.Controls.Add(this.Discount);
             this.Controls.Add(this.textBox_phonenumber);
             this.Controls.Add(this.nUMBER);
             this.Controls.Add(this.textBox_price);
@@ -156,8 +147,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_phonenumber;
         private System.Windows.Forms.Label nUMBER;
-        private System.Windows.Forms.TextBox textBox_discount;
-        private System.Windows.Forms.Label Discount;
         private System.Windows.Forms.Button button_addhouse;
+        private System.Windows.Forms.Label label4;
     }
 }
